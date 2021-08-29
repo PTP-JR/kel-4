@@ -1,5 +1,3 @@
-const about 
+// const about
 
-
-
-export default about;
+// export default about;
