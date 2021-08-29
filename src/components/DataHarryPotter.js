@@ -1,6 +1,7 @@
 import { Navbar, Container, Card, Button, Collapse, ListGroup } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import logo from "./img/logo.png";
+import { Link } from "react-router-dom";
 
 function DataHarryPotter() {
   const [dataHarryPotter, setDataHarryPotter] = useState([]);
@@ -20,8 +21,11 @@ function DataHarryPotter() {
         <Navbar fixed="top" bg="light" variant="dark">
           <Container>
             <Navbar.Brand href="#">
-              <img alt="" src={logo} width="250" height="50" className="d-inline-block align-top" /> React Bootstrap
+              <img alt="" src={logo} width="250" height="50" className="d-inline-block align-top" />
             </Navbar.Brand>
+            <Link to="/" style={{ justifyContent: "end" }}>
+              <h5>Log out</h5>
+            </Link>
           </Container>
         </Navbar>
       </section>
