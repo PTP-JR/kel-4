@@ -10,12 +10,8 @@ function App() {
 
   return (
     <div className="App">
-     
+        <Login />
         <DataHarryPotter />
-      
-       
-      
-      <Login />
     </div>
   );
 }
