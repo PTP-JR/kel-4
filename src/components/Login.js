@@ -6,7 +6,7 @@ function Login() {
 
   const [user, setUser] = useState([{ email: "kelompokempat", password: "4444" }]);
 
-  const [dataLogin, setDataLogin] = useState([{ email: "", password: "" }]);
+  const [dataLogin, setDataLogin] = useState([{ email: "admin@gmail.com", password: "admin123" }]);
 
   const handleChange = (event) => {
     setDataLogin([...dataLogin, ([event.target.name] = event.target.value)]);
