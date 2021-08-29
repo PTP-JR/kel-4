@@ -23,10 +23,12 @@ function DataHarryPotter() {
         <Navbar fixed="top" variant="dark" style={{ backgroundColor: "chocolate" }}>
           <Container fluid>
             <Navbar.Brand href="#">
-              <img alt="" src={logo} width="250" height="50" className="d-inline-block align-top" />
+              <img alt="" src={logo} width="250" height="60" className="d-inline-block align-top" />
             </Navbar.Brand>
             <Link to="/" style={{ justifyContent: "end" }}>
-              <h5> Log out</h5>
+              <h5>
+                <strong> Logout</strong>
+              </h5>
             </Link>
           </Container>
         </Navbar>
@@ -36,12 +38,12 @@ function DataHarryPotter() {
           <Container className="text-center mt-2 mb-2">
             <Col>
               <Link to="/home">
-                <SiNextdoor size={28} />
+                <SiNextdoor size={30} />
               </Link>
             </Col>
             <Col>
               <Link to="/about">
-                <FcAbout size={28} />
+                <FcAbout size={30} />
               </Link>
             </Col>
           </Container>
