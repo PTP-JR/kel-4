@@ -1,5 +1,4 @@
 import { Switch, Route } from "react-router-dom";
-
 import "./App.css";
 import DataHarryPotter from "./components/DataHarryPotter";
 import Login from "./components/Login";

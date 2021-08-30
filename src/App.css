@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: lightgray;
+  background-color: saddlebrown;
+  padding-top: 6rem;
+  padding-bottom: 5rem;
 }
 
 .App-logo {
@@ -42,8 +44,7 @@
 
 .Card {
   text-align: center;
-  padding: 1rem;
-  margin-top: 5rem;
+  padding: 2rem;
 }
 
 .Card img {
