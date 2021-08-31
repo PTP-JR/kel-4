@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 function Login() {
+
     const history = useHistory()
 
     const [user, setUser] = useState([
@@ -33,21 +34,24 @@ function Login() {
         }
     }
 
-    return (
-        <div>
-            <h1>Login</h1> 
-            <form>
-                <input type="text" name="email" placeholder="email" 
+    
+                
+
+  
+
+
+  return (
+    <div>
+      <h1>Login</h1>
+      <form>
+       <input type="text" name="email" placeholder="email" 
                 id="" value={dataLogin.email} onChange={handleChange} />
+        <input type="text" name="password" placeholder="password" id="" value={dataLogin.password} onChange={handleChange} />
 
-                <input type="text" name="password" placeholder="password"
-                id="" value={dataLogin.password} onChange={handleChange} />
-
-                <button onClick={handleSubmit}>Login</button>
-
-            </form>
-        </div>
-    );
+        <button onClick={handleSubmit}>Login</button>
+      </form>
+    </div>
+  );
 }
 
 export default Login;

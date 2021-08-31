@@ -1,6 +1,9 @@
-import { Navbar, Container, Card, Button, Collapse, ListGroup } from "react-bootstrap";
+import { Navbar, Container, Card, Button, Collapse, ListGroup, Col } from "react-bootstrap";
+import { SiNextdoor } from "react-icons/si";
+import { FcAbout } from "react-icons/fc";
 import { useEffect, useState } from "react";
 import logo from "./img/logo.png";
+import { Link } from "react-router-dom";
 
 function DataHarryPotter() {
   const [dataHarryPotter, setDataHarryPotter] = useState([]);
@@ -17,11 +20,32 @@ function DataHarryPotter() {
   return (
     <>
       <section>
-        <Navbar fixed="top" bg="light" variant="dark">
-          <Container>
+        <Navbar fixed="top" variant="dark" style={{ backgroundColor: "chocolate" }}>
+          <Container fluid>
             <Navbar.Brand href="#">
-              <img alt="" src={logo} width="250" height="50" className="d-inline-block align-top" /> React Bootstrap
+              <img alt="" src={logo} width="250" height="60" className="d-inline-block align-top" />
             </Navbar.Brand>
+            <Link to="/" style={{ justifyContent: "end" }}>
+              <h5>
+                <strong> Logout</strong>
+              </h5>
+            </Link>
+          </Container>
+        </Navbar>
+      </section>
+      <section>
+        <Navbar fixed="bottom" variant="dark" style={{ backgroundColor: "chocolate" }}>
+          <Container className="text-center mt-2 mb-2">
+            <Col>
+              <Link to="/home">
+                <SiNextdoor size={30} />
+              </Link>
+            </Col>
+            <Col>
+              <Link to="/about">
+                <FcAbout size={30} />
+              </Link>
+            </Col>
           </Container>
         </Navbar>
       </section>
