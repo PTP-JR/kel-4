@@ -15,16 +15,16 @@ function Login() {
     ]);
  
     const handleChange = (event) => {
-        setDataLogin([
+        setDataLogin([{
             ...dataLogin, 
-            [event.target.name] = event.target.value
-        ])
+            [event.target.name] : event.target.value
+        }])
     }
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log(dataLogin);
 
-        if (dataLogin.username === user.email){
+        if (dataLogin.email === user.email){
             if (dataLogin.password === user.password) {
                 history.push("/dataharrypotter")
             }
@@ -37,7 +37,7 @@ function Login() {
         <div>
             <h1>Login</h1> 
             <form>
-                <input type="text" name="email" placeholder="username" 
+                <input type="text" name="email" placeholder="email" 
                 id="" value={dataLogin.email} onChange={handleChange} />
 
                 <input type="text" name="password" placeholder="password"
