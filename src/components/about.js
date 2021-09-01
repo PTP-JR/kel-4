@@ -25,7 +25,7 @@ function About() {
     },
     {
       name: "Sarah Handari",
-      origin: "Indonesia",
+      origin: "Jakarta",
       image: Sarah,
       school: "Teknik Kimia, UMS",
     },
