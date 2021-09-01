@@ -9,7 +9,7 @@ function DataHarryPotter() {
   const [dataHarryPotter, setDataHarryPotter] = useState([]);
 
   useEffect(() => {
-    fetch("http://hp-api.herokuapp.com/api/characters")
+    fetch("https://hp-api.herokuapp.com/api/characters")
       .then((result) => result.json())
       .then((result) => setDataHarryPotter(result))
       .catch((err) => console.log(err));
