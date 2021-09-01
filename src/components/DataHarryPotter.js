@@ -18,7 +18,7 @@ function DataHarryPotter() {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
+    <div className="Home">
       <section>
         <Navbar fixed="top" variant="dark" style={{ backgroundColor: "chocolate" }}>
           <Container fluid>
@@ -74,7 +74,7 @@ function DataHarryPotter() {
           </div>
         </section>
       ))}
-    </>
+    </div>
   );
 }
 export default DataHarryPotter;

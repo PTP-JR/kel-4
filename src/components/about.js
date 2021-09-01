@@ -53,7 +53,7 @@ function About() {
               <p>
                 Kelompok 4 adalah salah satu dari 4 kelompok dalam <i>"Jasa Raharja Resilience Program"</i> yang merupakan suatu program pelatihan bersertifikat, yang bertujuan memberikan kemampuan teknis dalam dua bidang; salah satunya
                 bidang digital, berupa basic coding. Program berlangsung secara intensif selama 3 bulan penuh, mulai dari bulan Juni hingga Agustus 2021. Dan ini adalah tugas akhir kelompok setelah mempelajari semua materi dari awal hingga
-                materi tentang ReactJs. Tugas ini bersifat Project yang dikerjakan berkelompok.
+                materi tentang ReactJS. Tugas ini bersifat Project yang dikerjakan berkelompok.
               </p>
               <p>
                 Project ini kami persembahkan kepada semua pihak, kami mengucapkan terima kasih yang sebesar-besarnya kepada{" "}
