@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: saddlebrown;
+  background-color: lightgray;
   padding-top: 6rem;
   padding-bottom: 5rem;
 }
@@ -49,4 +49,27 @@
 
 .Card img {
   height: 250px;
+}
+
+.About {
+  margin: 2rem;
+  margin-bottom: 1rem;
+}
+
+.AboutUs {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+  border-style: ridge;
+  border-width: 10px;
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+.Profil {
+  justify-content: center;
+  display: flex;
+  margin: 2rem;
+  margin-top: 8rem;
 }

@@ -1,21 +1,18 @@
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import DataHarryPotter from "./components/DataHarryPotter";
-<<<<<<< HEAD
-=======
+
+
 import Login from "./components/Login";
-// import about from "./components/about";
->>>>>>> main
+
+import About from "./components/About";
 
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-      <>
-     
-        <DataHarryPotter />
-      </>
-=======
+
+      
+
       <Switch>
         <Route exact path="/">
           <Login />
@@ -24,10 +21,10 @@ function App() {
           <DataHarryPotter />
         </Route>
         <Route path="/about">
-          <about />
+          <About />
         </Route>
       </Switch>
->>>>>>> main
+
     </div>
   );
 }
