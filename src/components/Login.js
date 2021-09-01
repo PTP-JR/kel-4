@@ -63,7 +63,7 @@ function Login() {
             <Form>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="text" name="email" placeholder="username" id="" value={dataLogin.username} onChange={handleChange} />
+                <Form.Control type="email" name="email" placeholder="username" id="" value={dataLogin.username} onChange={handleChange} />
                 <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
