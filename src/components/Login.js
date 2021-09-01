@@ -36,11 +36,11 @@ function Login() {
     <div className="Login">
       <Container>
         <Link to="/" onClick={handleShow}>
-          <h3>
+          <h5>
             <strong> Login</strong> {""}
             <Spinner animation="grow" variant="danger" size="sm" />
             <Spinner animation="grow" variant="danger" />
-          </h3>
+          </h5>
         </Link>
         <Modal size="lg" aria-labelledby="contained-modal-title-vcenter" show={show} onHide={handleClose} centered>
           <Modal.Header closeButton>

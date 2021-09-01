@@ -9,7 +9,7 @@ function DataHarryPotter() {
   const [dataHarryPotter, setDataHarryPotter] = useState([]);
 
   useEffect(() => {
-    fetch("http://hp-api.herokuapp.com/api/characters")
+    fetch("https://hp-api.herokuapp.com/api/characters")
       .then((result) => result.json())
       .then((result) => setDataHarryPotter(result))
       .catch((err) => console.log(err));
@@ -20,30 +20,30 @@ function DataHarryPotter() {
   return (
     <div className="Home">
       <section>
-        <Navbar fixed="top" variant="dark" style={{ backgroundColor: "chocolate" }}>
-          <Container fluid>
+        <Navbar fixed="top" variant="dark" bg="light">
+          <Container>
             <Navbar.Brand href="#">
-              <img alt="" src={logo} width="250" height="60" className="d-inline-block align-top" />
+              <img alt="" src={logo} width="150" height="50" className="d-inline-block align-top" />
             </Navbar.Brand>
             <Link to="/" style={{ justifyContent: "end" }}>
-              <h5>
+              <h6>
                 <strong> Logout</strong>
-              </h5>
+              </h6>
             </Link>
           </Container>
         </Navbar>
       </section>
       <section>
-        <Navbar fixed="bottom" variant="dark" style={{ backgroundColor: "chocolate" }}>
+        <Navbar fixed="bottom" variant="dark" bg="light">
           <Container className="text-center mt-2 mb-2">
             <Col>
               <Link to="/home">
-                <SiNextdoor size={30} />
+                <SiNextdoor size={25} />
               </Link>
             </Col>
             <Col>
               <Link to="/about">
-                <FcAbout size={30} />
+                <FcAbout size={25} />
               </Link>
             </Col>
           </Container>

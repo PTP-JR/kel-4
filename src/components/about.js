@@ -40,14 +40,44 @@ function About() {
   return (
     <div className="About">
       <section>
-        <p style={{ textAlign: "center", fontSize: "50px" }}>
+        <Navbar fixed="top" variant="dark" bg="light">
+          <Container>
+            <Navbar.Brand href="#">
+              <img alt="" src={logo} width="150" height="50" className="d-inline-block align-top" />
+            </Navbar.Brand>
+            <Link to="/" style={{ justifyContent: "end" }}>
+              <h6>
+                <strong> Logout</strong>
+              </h6>
+            </Link>
+          </Container>
+        </Navbar>
+      </section>
+      <section>
+        <Navbar fixed="bottom" variant="dark" bg="light">
+          <Container className="text-center mt-2 mb-2">
+            <Col>
+              <Link to="/home">
+                <SiNextdoor size={25} />
+              </Link>
+            </Col>
+            <Col>
+              <Link to="/about">
+                <FcAbout size={25} />
+              </Link>
+            </Col>
+          </Container>
+        </Navbar>
+      </section>
+      <section>
+        <p style={{ textAlign: "center", fontSize: "50px", marginTop: "4rem" }}>
           <strong> About Us</strong>
         </p>
         <p style={{ textAlign: "center" }}>
           {" "}
           <strong>Kelompok 4</strong>
         </p>
-        <Container className="AboutUs" fluid>
+        <Container className="AboutUs">
           <Row>
             <Col>
               <p>
@@ -71,57 +101,22 @@ function About() {
         </Container>
       </section>
 
-      <section>
-        <Navbar fixed="top" variant="dark" style={{ backgroundColor: "chocolate" }}>
-          <Container fluid>
-            <Navbar.Brand href="#">
-              <img alt="" src={logo} width="250" height="60" className="d-inline-block align-top" />
-            </Navbar.Brand>
-            <Link to="/" style={{ justifyContent: "end" }}>
-              <h5>
-                <strong> Logout</strong>
-              </h5>
-            </Link>
-          </Container>
-        </Navbar>
-      </section>
-
-      <section>
-        <Navbar fixed="bottom" variant="dark" style={{ backgroundColor: "chocolate" }}>
-          <Container className="text-center mt-2 mb-2">
-            <Col>
-              <Link to="/home">
-                <SiNextdoor size={30} />
-              </Link>
-            </Col>
-            <Col>
-              <Link to="/about">
-                <FcAbout size={30} />
-              </Link>
-            </Col>
-          </Container>
-        </Navbar>
-      </section>
       <p style={{ textAlign: "center", fontSize: "25px" }}>
         <i>Presented By</i>
       </p>
       <section>
         {profil.map((item) => (
-          <Container fluid className="Profil">
+          <Container className="Profil">
             <Figure>
-              <Row>
-                <Col>
-                  <Figure.Image width={150} height={250} alt="171x180" src={item.image} roundedCircle />
-                </Col>
-                <Col>
-                  <ul>
-                    <li>{item.name}</li>
-                    <li>{item.origin}</li>
-                    <li>{item.school}</li>
-                  </ul>
-                </Col>
-              </Row>
+              <Col>
+                <Figure.Image width={130} height={250} alt="171x180" src={item.image} roundedCircle />
+              </Col>
             </Figure>
+            <ul>
+              <li>{item.name}</li>
+              <li>{item.origin}</li>
+              <li>{item.school}</li>
+            </ul>
           </Container>
         ))}
       </section>
