@@ -1,7 +1,7 @@
 import { Navbar, Container, Col, Figure, Row } from "react-bootstrap";
 import { SiNextdoor } from "react-icons/si";
 import { FcAbout } from "react-icons/fc";
-import logo from "./img/logo.png";
+import logo from "./img/logo1.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Adit from "./img/adit.png";
