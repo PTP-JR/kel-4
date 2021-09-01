@@ -35,7 +35,10 @@
 
 /* Awal Login */
 .Login {
-  margin: 2rem;
+  margin: 0rem;
+  padding-top: 3rem;
+  padding-right: 1rem;
+  float: right;
 }
 #Spinner {
   margin-left: 5rem;
@@ -50,6 +53,7 @@
   padding-top: 6rem;
   padding-bottom: 5rem;
   background-color: cadetblue;
+  margin: 0;
 }
 .Card {
   text-align: center;
@@ -63,9 +67,7 @@
 /* Awal CSS Bagian About */
 .About {
   background-color: lightblue;
-  padding: 1rem;
-  margin-top: 5rem;
-  margin-bottom: 3rem;
+  margin: 0;
 }
 
 .AboutUs {
@@ -80,9 +82,10 @@
 }
 
 .Profil {
-  justify-content: center;
   display: flex;
-  margin: 2rem;
-  margin-top: 8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 6rem;
+  margin-bottom: 3rem;
 }
 /* Akhir CSS Bagian About */
