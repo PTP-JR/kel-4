@@ -6,9 +6,12 @@ import { Link } from "react-router-dom";
 function Login() {
   const history = useHistory();
 
-  const [user] = useState({ email: "kelompok4", password: "kelompok4" });
+  const [user, setUser] = useState([
+    { email: "kelompokempat@gmail.com", password: "kel4444" },
+    { email: "admin@gmail.com", password: "admin" },
+  ]);
 
-  const [dataLogin, setDataLogin] = useState({ email: "", password: "" });
+  const [dataLogin, setDataLogin] = useState({});
 
   const handleChange = (event) => {
     setDataLogin({
@@ -18,14 +21,24 @@ function Login() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(dataLogin);
-    if (dataLogin.email === user.email) {
-      if (dataLogin.password === user.password) {
-        history.push("/home");
+
+    for (let i = 0; i < user.length; i++)
+      if (user[i].email === dataLogin.email) {
+        if (user[i].password === dataLogin.password) {
+          history.push("/home");
+          break;
+        } else {
+          alert("password yang dimasukkan salah");
+          break;
+        }
+      } else if (user[i].email !== dataLogin.email && user[i].password !== dataLogin.password) {
+        if (user.length - 1 === i) {
+          alert("email yang dimasukkan salah");
+          break;
+        } else {
+          continue;
+        }
       }
-    } else {
-      alert("username dan password salah");
-    }
   };
 
   const [show, setShow] = useState(false);
