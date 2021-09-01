@@ -7,7 +7,7 @@ function Login() {
   const history = useHistory();
 
   const [user, setUser] = useState([
-    { email: "kelompokempat@gmail.com", password: "kel4444" },
+    { email: "kelompok4@gmail.com", password: "kelompok4" },
     { email: "admin@gmail.com", password: "admin" },
   ]);
 
