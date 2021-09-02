@@ -106,8 +106,8 @@ function About() {
                 </Figure>
               </Col>
               <Col>
+                <strong>{item.name}</strong>
                 <ul>
-                  <li>{item.name}</li>
                   <li>{item.origin}</li>
                   <li>{item.school}</li>
                 </ul>
