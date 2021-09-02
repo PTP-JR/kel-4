@@ -1,4 +1,4 @@
-import { Navbar, Container, Col, Figure, Row } from "react-bootstrap";
+import { Navbar, Container, Col, Figure } from "react-bootstrap";
 import { SiNextdoor } from "react-icons/si";
 import { FcAbout } from "react-icons/fc";
 import logo from "./img/logo1.png";
@@ -70,55 +70,51 @@ function About() {
         </Navbar>
       </section>
       <section>
-        <p style={{ textAlign: "center", fontSize: "50px", marginTop: "4rem" }}>
+        <p style={{ textAlign: "center", fontSize: "30px", marginTop: "4rem" }}>
           <strong> About Us</strong>
         </p>
         <p style={{ textAlign: "center" }}>
-          {" "}
           <strong>Kelompok 4</strong>
         </p>
         <Container className="AboutUs">
-          <Row>
-            <Col>
-              <p>
-                Kelompok 4 adalah salah satu dari 4 kelompok dalam <i>"Jasa Raharja Resilience Program"</i> yang merupakan suatu program pelatihan bersertifikat, yang bertujuan memberikan kemampuan teknis dalam dua bidang; salah satunya
-                bidang digital, berupa basic coding. Program berlangsung secara intensif selama 3 bulan penuh, mulai dari bulan Juni hingga Agustus 2021. Dan ini adalah tugas akhir kelompok setelah mempelajari semua materi dari awal hingga
-                materi tentang ReactJS. Tugas ini bersifat Project yang dikerjakan berkelompok.
-              </p>
-              <p>
-                Project ini kami persembahkan kepada semua pihak, kami mengucapkan terima kasih yang sebesar-besarnya kepada{" "}
-                <a href="https://www.jasaraharja.co.id/">
-                  <i>Jasa Raharja</i>
-                </a>{" "}
-                yang telah menyelanggarakan kesempatan belajar ini. Serta kepada semua kakak-kakak dari{" "}
-                <a href="https://skilvul.com/">
-                  <i>Skilvul</i>
-                </a>{" "}
-                yang dengan sabar membimbing kami dalam proses belajar.
-              </p>
-            </Col>
-          </Row>
+          <p>
+            Kelompok 4 adalah salah satu dari 4 kelompok dalam <i>"Jasa Raharja Resilience Program"</i> yang merupakan suatu program pelatihan bersertifikat, yang bertujuan memberikan kemampuan teknis dalam dua bidang; salah satunya bidang
+            digital, berupa basic coding. Program berlangsung secara intensif selama 3 bulan penuh, mulai dari bulan Juni hingga Agustus 2021. Dan ini adalah tugas akhir kelompok setelah mempelajari semua materi dari awal hingga materi
+            tentang ReactJS. Tugas ini bersifat Project yang dikerjakan berkelompok.
+          </p>
+          <p>
+            Project ini kami persembahkan kepada semua pihak, kami mengucapkan terima kasih yang sebesar-besarnya kepada{" "}
+            <a href="https://www.jasaraharja.co.id/">
+              <i>Jasa Raharja</i>
+            </a>{" "}
+            yang telah menyelanggarakan kesempatan belajar ini. Serta kepada semua kakak-kakak dari{" "}
+            <a href="https://skilvul.com/">
+              <i>Skilvul</i>
+            </a>{" "}
+            yang dengan sabar membimbing kami dalam proses belajar.
+          </p>
         </Container>
-      </section>
-
-      <p style={{ textAlign: "center", fontSize: "25px" }}>
-        <i>Presented By</i>
-      </p>
-      <section>
-        {profil.map((item) => (
-          <Container className="Profil">
-            <Figure>
+        <p style={{ textAlign: "center", fontSize: "20px", marginTop: "4rem" }}>
+          <i>Presented By</i>
+        </p>
+        <Container className="Profil">
+          {profil.map((item) => (
+            <div>
               <Col>
-                <Figure.Image width={130} height={250} alt="171x180" src={item.image} roundedCircle />
+                <Figure>
+                  <Figure.Image width={130} height={250} alt="171x180" src={item.image} roundedCircle />
+                </Figure>
               </Col>
-            </Figure>
-            <ul>
-              <li>{item.name}</li>
-              <li>{item.origin}</li>
-              <li>{item.school}</li>
-            </ul>
-          </Container>
-        ))}
+              <Col>
+                <ul>
+                  <li>{item.name}</li>
+                  <li>{item.origin}</li>
+                  <li>{item.school}</li>
+                </ul>
+              </Col>
+            </div>
+          ))}
+        </Container>
       </section>
     </div>
   );

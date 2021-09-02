@@ -68,14 +68,13 @@
 .About {
   background-color: lightblue;
   margin: 0;
+  padding-top: 1rem;
 }
 
 .AboutUs {
   text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 10rem;
   border-style: ridge;
-  border-width: 10px;
+  border-width: 5px;
   border-radius: 25px;
   font-size: 20px;
   padding: 1rem;
@@ -83,9 +82,10 @@
 
 .Profil {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 6rem;
-  margin-bottom: 3rem;
+  text-align: start;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
 }
 /* Akhir CSS Bagian About */

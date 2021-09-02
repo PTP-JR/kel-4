@@ -6,57 +6,14 @@ import { Link } from "react-router-dom";
 function Login() {
   const history = useHistory();
 
-  
 
+  const [user, setUser] = useState([
+    { email: "kelompok4@gmail.com", password: "kelompok4" },
+    { email: "admin@gmail.com", password: "admin" },
+  ]);
 
-    const [user, setUser] = useState([
-        {email: "kelompok4@gmail.com",
-        password : "kelompok4"},
-        {email: "admin@gmail.com",
-        password : "admin"}
-    ]);
+  const [dataLogin, setDataLogin] = useState({});
 
-    const [dataLogin, setDataLogin] = useState ({});
- 
-    const handleChange = (event) => {
-        setDataLogin({
-            ...dataLogin, 
-            [event.target.name] : event.target.value
-            });
-    }
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(dataLogin);
-      console.log(user);
-      console.log(user.length);
-
-      for (let i = 0; i < user.length; i++)  
-        if (user[i].email === dataLogin.email){
-            if (user[i].password === dataLogin.password) {
-                history.push("/home");
-               break;
-        } else {
-            alert ("email benar dan password salah");
-            break;
-            }
-    } else if (
-       user[i].email !== dataLogin.email &&
-        user[i].password !== dataLogin.password
-      ) {
-        if(user.length -1 === i) {
-          alert("salah");
-          break;
-        } else {
-          continue;
-        }
-      }
-     };
-
-    
-                
-  
-   
-  const [dataLogin, setDataLogin] = useState({ email: "", password: "" });
 
   const handleChange = (event) => {
     setDataLogin({
@@ -66,14 +23,24 @@ function Login() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(dataLogin);
-    if (dataLogin.email === user.email) {
-      if (dataLogin.password === user.password) {
-        history.push("/home");
+
+    for (let i = 0; i < user.length; i++)
+      if (user[i].email === dataLogin.email) {
+        if (user[i].password === dataLogin.password) {
+          history.push("/home");
+          break;
+        } else {
+          alert("password yang dimasukkan salah");
+          break;
+        }
+      } else if (user[i].email !== dataLogin.email && user[i].password !== dataLogin.password) {
+        if (user.length - 1 === i) {
+          alert("email yang dimasukkan salah");
+          break;
+        } else {
+          continue;
+        }
       }
-    } else {
-      alert("username dan password salah");
-    }
   };
 
   const [show, setShow] = useState(false);
@@ -98,7 +65,7 @@ function Login() {
             <Form>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="text" name="email" placeholder="username" id="" value={dataLogin.username} onChange={handleChange} />
+                <Form.Control type="email" name="email" placeholder="username" id="" value={dataLogin.username} onChange={handleChange} />
                 <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
