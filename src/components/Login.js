@@ -6,47 +6,58 @@ function Login() {
     const history = useHistory()
 
     const [user, setUser] = useState([
-        {email: "kelompokempat",
-        password : "4444"}
+        {email: "kelompokempat@gmail.com",
+        password : "kel4444"},
+        {email: "admin123@gmail.com",
+        password : "admin123"}
     ]);
 
-    const [dataLogin, setDataLogin] = useState ([
-        {email: "",
-        password: ""}
-    ]);
+    const [dataLogin, setDataLogin] = useState ({});
  
     const handleChange = (event) => {
-        setDataLogin([{
+        setDataLogin({
             ...dataLogin, 
             [event.target.name] : event.target.value
-        }])
+            });
     }
     const handleSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
         console.log(dataLogin);
+      console.log(user);
+      console.log(user.length);
 
-        if (dataLogin.email === user.email){
-            if (dataLogin.password === user.password) {
-                history.push("/dataharrypotter")
-            }
+      for (let i = 0; i < user.length; i++)  
+        if (user[i].email === dataLogin.email){
+            if (user[i].password === dataLogin.password) {
+                history.push("/home");
+               break;
         } else {
-            alert ("uname dan password salah")
+            alert ("email benar dan password salah");
+            break;
+            }
+    } else if (
+       user[i].email !== dataLogin.email &&
+        user[i].password !== dataLogin.password
+      ) {
+        if(user.length -1 === i) {
+          alert("salah");
+          break;
+        } else {
+          continue;
         }
-    }
+      }
+     };
 
     
                 
-
-  
-
-
   return (
     <div>
       <h1>Login</h1>
       <form>
-       <input type="text" name="email" placeholder="email" 
+        <input type="text" name="email" placeholder="email" 
                 id="" value={dataLogin.email} onChange={handleChange} />
-        <input type="text" name="password" placeholder="password" id="" value={dataLogin.password} onChange={handleChange} />
+        <input type="text" name="password" placeholder="password" 
+                id="" value={dataLogin.password} onChange={handleChange} />
 
         <button onClick={handleSubmit}>Login</button>
       </form>
