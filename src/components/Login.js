@@ -6,14 +6,12 @@ import { Link } from "react-router-dom";
 function Login() {
   const history = useHistory();
 
-
-  const [user, setUser] = useState([
+  const [user] = useState([
     { email: "kelompok4@gmail.com", password: "kelompok4" },
     { email: "admin@gmail.com", password: "admin" },
   ]);
 
   const [dataLogin, setDataLogin] = useState({});
-
 
   const handleChange = (event) => {
     setDataLogin({
@@ -81,7 +79,6 @@ function Login() {
           </Modal.Body>
         </Modal>
       </Container>
-
     </div>
   );
 }
