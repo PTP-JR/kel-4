@@ -2,7 +2,8 @@ import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import DataHarryPotter from "./components/DataHarryPotter";
 import Login from "./components/Login";
-// import about from "./components/about";
+import About from "./components/about";
+import "./index.css";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <DataHarryPotter />
         </Route>
         <Route path="/about">
-          <about />
+          <About />
         </Route>
       </Switch>
     </div>

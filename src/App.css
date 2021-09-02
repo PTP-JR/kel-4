@@ -1,12 +1,3 @@
-.App {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: saddlebrown;
-  padding-top: 6rem;
-  padding-bottom: 5rem;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -42,11 +33,59 @@
   }
 }
 
+/* Awal Login */
+.Login {
+  margin: 0rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  float: right;
+}
+#Spinner {
+  margin-left: 5rem;
+}
+/* Akhir Login */
+
+/* Awal Home */
+.Home {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  background-color: cadetblue;
+  margin: 0;
+}
 .Card {
   text-align: center;
   padding: 2rem;
 }
-
 .Card img {
   height: 250px;
 }
+/* Akhir CSS Bagian Home  */
+
+/* Awal CSS Bagian About */
+.About {
+  background-color: lightblue;
+  margin: 0;
+}
+
+.AboutUs {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+  border-style: ridge;
+  border-width: 10px;
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+.Profil {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 6rem;
+  margin-bottom: 3rem;
+}
+/* Akhir CSS Bagian About */
