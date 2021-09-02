@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 function Login() {
   const history = useHistory();
 
-  const [user] = useState({ email: "kelompok4", password: "kelompok4" });
+  
 
-<<<<<<< HEAD
+
     const [user, setUser] = useState([
-        {email: "kelompokempat@gmail.com",
-        password : "kel4444"},
-        {email: "admin123@gmail.com",
-        password : "admin123"}
+        {email: "kelompok4@gmail.com",
+        password : "kelompok4"},
+        {email: "admin@gmail.com",
+        password : "admin"}
     ]);
 
     const [dataLogin, setDataLogin] = useState ({});
@@ -54,18 +54,8 @@ function Login() {
 
     
                 
-  return (
-    <div>
-      <h1>Login</h1>
-      <form>
-        <input type="text" name="email" placeholder="email" 
-                id="" value={dataLogin.email} onChange={handleChange} />
-        <input type="text" name="password" placeholder="password" 
-                id="" value={dataLogin.password} onChange={handleChange} />
-
-        <button onClick={handleSubmit}>Login</button>
-      </form>
-=======
+  
+   
   const [dataLogin, setDataLogin] = useState({ email: "", password: "" });
 
   const handleChange = (event) => {
@@ -124,7 +114,7 @@ function Login() {
           </Modal.Body>
         </Modal>
       </Container>
->>>>>>> f08e8a1d09378c05b74c1c4aa3a6c0f82deace03
+
     </div>
   );
 }
