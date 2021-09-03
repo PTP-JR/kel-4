@@ -3,7 +3,6 @@ import "./App.css";
 import DataHarryPotter from "./components/DataHarryPotter";
 import Login from "./components/Login";
 import About from "./components/about";
-import "./index.css";
 import { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 
@@ -16,7 +15,6 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Login />
-
           <Modal show={show}>
             <Modal.Header>
               <Modal.Title>Hallo</Modal.Title>
