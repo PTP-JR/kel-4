@@ -52,7 +52,7 @@ function DataHarryPotter() {
       {dataHarryPotter.map((item) => (
         <section>
           <div className="Card">
-            <Card border="light" style={{ width: "15rem" }}>
+            <Card border="light" style={{ width: "12rem" }}>
               <Card.Img className="Foto" variant="top" src={item.image} />
               <Card.Body>
                 <Card.Title>{item.name}</Card.Title>

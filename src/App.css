@@ -64,7 +64,8 @@
   padding: 2rem;
 }
 .Card img {
-  height: 250px;
+  height: 200px;
+  border-radius: 5px;
 }
 /* Akhir CSS Bagian Home  */
 
