@@ -1,4 +1,4 @@
-import { Navbar, Container, Col, Figure } from "react-bootstrap";
+import { Navbar, Container, Col, Carousel, Figure } from "react-bootstrap";
 import { SiNextdoor } from "react-icons/si";
 import { FcAbout } from "react-icons/fc";
 import logo from "./img/logo1.png";
@@ -97,23 +97,27 @@ function About() {
         <p style={{ textAlign: "center", fontSize: "20px", marginTop: "4rem" }}>
           <i>Presented By</i>
         </p>
+      </section>
+      <section>
         <Container className="Profil">
-          {profil.map((item) => (
-            <div>
-              <Col>
+          <Carousel fade>
+            {profil.map((item) => (
+              <Carousel.Item>
                 <Figure>
-                  <Figure.Image width={130} height={250} alt="171x180" src={item.image} roundedCircle />
+                  <Figure.Image width={171} height={180} alt="171x180" src={item.image} roundedCircle className="Figur-img" />
+                  <Figure.Caption>
+                    <h3>{item.name}</h3>
+                    <p>
+                      <h6>{item.school}</h6>
+                    </p>
+                    <p>
+                      <h6>{item.origin}</h6>
+                    </p>
+                  </Figure.Caption>
                 </Figure>
-              </Col>
-              <Col>
-                <strong>{item.name}</strong>
-                <ul>
-                  <li>{item.origin}</li>
-                  <li>{item.school}</li>
-                </ul>
-              </Col>
-            </div>
-          ))}
+              </Carousel.Item>
+            ))}
+          </Carousel>
         </Container>
       </section>
     </div>

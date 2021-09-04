@@ -40,7 +40,6 @@
   padding-right: 1rem;
   float: right;
 }
-
 /* Akhir Login */
 
 /* Awal Home */
@@ -63,17 +62,19 @@
   text-align: center;
   padding: 2rem;
 }
+
 .Card img {
   height: 200px;
   border-radius: 5px;
 }
-/* Akhir CSS Bagian Home  */
+/* Akhir Home  */
 
-/* Awal CSS Bagian About */
+/* Awal About */
 .About {
   background-color: lightblue;
-  margin: 0;
+  margin: auto;
   padding-top: 1rem;
+  padding-bottom: 3rem;
 }
 
 .AboutUs {
@@ -86,11 +87,6 @@
 }
 
 .Profil {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-align: start;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+  text-align: center;
 }
-/* Akhir CSS Bagian About */
+/* Akhir About */
