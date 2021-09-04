@@ -20,7 +20,7 @@ function DataHarryPotter() {
   return (
     <div className="Home">
       <section>
-        <Navbar fixed="top" variant="dark" bg="light">
+        <Navbar className="NavbarUp" fixed="top" variant="dark" bg="light">
           <Container>
             <Navbar.Brand href="#">
               <img alt="" src={logo} width="150" height="50" className="d-inline-block align-top" />

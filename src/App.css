@@ -40,9 +40,7 @@
   padding-right: 1rem;
   float: right;
 }
-#Spinner {
-  margin-left: 5rem;
-}
+
 /* Akhir Login */
 
 /* Awal Home */
@@ -52,9 +50,15 @@
   flex-wrap: wrap;
   padding-top: 6rem;
   padding-bottom: 5rem;
-  background-color: cadetblue;
   margin: 0;
+  background-image: url(./components/img/1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: white;
 }
+
 .Card {
   text-align: center;
   padding: 2rem;
